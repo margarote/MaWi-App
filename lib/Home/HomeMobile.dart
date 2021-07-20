@@ -97,8 +97,7 @@ class HomeMobile extends StatelessWidget {
                                       size: textSize(c.maxWidth, max: 20),
                                       textAlign: TextAlign.start),
                                   onTap: () {
-                                    _.scrollController.position.moveTo(
-                                        2300,
+                                    _.scrollController.position.moveTo(2300,
                                         curve: Curves.slowMiddle,
                                         duration: Duration(seconds: 2));
                                   },
@@ -140,7 +139,8 @@ class HomeMobile extends StatelessWidget {
                                       size: textSize(c.maxWidth, max: 20),
                                       textAlign: TextAlign.start),
                                   onTap: () {
-                                    _.scrollController.position.moveTo(6088.78449278438,
+                                    _.scrollController.position.moveTo(
+                                        6088.78449278438,
                                         curve: Curves.slowMiddle,
                                         duration: Duration(seconds: 2));
                                   },
@@ -175,7 +175,8 @@ class HomeMobile extends StatelessWidget {
                                                   gradient: LinearGradient(
                                                     colors: [
                                                       roxo,
-                                                      Colors.deepPurple.shade900,
+                                                      Colors
+                                                          .deepPurple.shade900,
                                                     ],
                                                     begin: Alignment.bottomLeft,
                                                     end: Alignment.topRight,
@@ -201,7 +202,8 @@ class HomeMobile extends StatelessWidget {
                                                     color: roxo,
                                                     size: textSize(c.maxWidth,
                                                         max: 20),
-                                                    textAlign: TextAlign.justify),
+                                                    textAlign:
+                                                        TextAlign.justify),
                                               ),
                                               SizedBox(
                                                 height: 30,
@@ -272,7 +274,6 @@ class HomeMobile extends StatelessWidget {
                         ),
                         child: Column(
                           children: [
-                           
                             GetBuilder<HomeController>(
                               init: HomeController(),
                               initState: (_) {},
@@ -292,7 +293,8 @@ class HomeMobile extends StatelessWidget {
                               },
                             ),
                             U.texto(
-                                text: "Desenvolvemos Apps que fazem a diferença",
+                                text:
+                                    "Desenvolvemos Apps que fazem a diferença",
                                 color: Colors.white,
                                 size: textSize(c.maxWidth, max: 20)),
                             SizedBox(
@@ -749,7 +751,30 @@ Ofereça facilidade e benefícios, com o menor número de cliques possíveis: Re
                         height: 70,
                       ),
                       Tecnologia(),
-                      Contato(_.scrollController),
+                      SizedBox(
+                        height: 70,
+                      ),
+                      GestureDetector(
+                        child: Container(
+                          width: sizeW * .6,
+                          height: sizeW * .1,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: roxo),
+                          child: Center(
+                            child: U.textoFontWeight(
+                                text: "Solicitar Contato",
+                                color: Colors.white,
+                                size: textSize(sizeW, max: 30)),
+                          ),
+                        ),
+                        onTap: () {
+                          Get.to(ContatoMobile(_.scrollController));
+                        },
+                      ),
+                      SizedBox(
+                        height: 70,
+                      ),
                       Container(
                         width: sizeW,
                         height: 80,
@@ -783,8 +808,8 @@ Ofereça facilidade e benefícios, com o menor número de cliques possíveis: Re
                               ),
                               Container(
                                 width: c.maxWidth * .3,
-                                child: U
-                                    .texto(text: """Centro, Rua Cruz e Souza, 100.
+                                child: U.texto(
+                                    text: """Centro, Rua Cruz e Souza, 100.
 Santa Catarina, SC
 89124-000""", color: Colors.white, size: textSize(sizeW, max: 12)),
                               ),
@@ -793,12 +818,12 @@ Santa Catarina, SC
                               ),
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Row(
-                                    
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: [
                                       /*
                                           InkWell(
@@ -808,7 +833,8 @@ Santa Catarina, SC
                                           SizedBox(width: 10,),
                                           */
                                       InkWell(
-                                        child: FaIcon(FontAwesomeIcons.instagram,
+                                        child: FaIcon(
+                                            FontAwesomeIcons.instagram,
                                             color: Colors.white,
                                             size: textSize(sizeW, max: 20)),
                                         onTap: () async {
@@ -841,7 +867,7 @@ Santa Catarina, SC
                 ),
               ),
             ),
-          Align(
+            Align(
               alignment: Alignment.topCenter,
               child: Container(
                 height: 80,
@@ -893,7 +919,6 @@ Santa Catarina, SC
                 ),
               ),
             ),
-            
           ],
         ),
       );

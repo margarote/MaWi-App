@@ -36,6 +36,7 @@ dependencies:
   cloud_firestore: ^0.14.4
   url_launcher: 6.0.2
   transparent_image: ^2.0.0
+  circular_reveal_animation: ^2.0.0
 
 dev_dependencies:
   flutter_test:

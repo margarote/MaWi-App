@@ -10,6 +10,10 @@ class ContatoController extends GetxController {
   final TextEditingController descricao = TextEditingController();
   bool carregando = false;
 
+    AnimationController animationController;
+  Animation<double> animation;
+
+  static ContatoController get to => Get.put(ContatoController());
 
 
 }
